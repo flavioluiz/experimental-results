@@ -39,7 +39,7 @@ AMP1 = 100*kamp.^T.*cos(PHASE_1+(2*pi*f0.*(k.^T-1)/log(k)) );
 AMP2 = 100*kamp.^T.*cos(PHASE_2+(2*pi*f0.*(k.^T-1)/log(k)) );
 run_save_test('symexc_1');
 run_save_test('symexc_2');
-
+%%
 diff_phase = 180;
 PHASE_1 = pi/2;
 PHASE_2 = pi/2 + diff_phase*pi/180;
