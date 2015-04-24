@@ -1,0 +1,1 @@
+tank filling ratio: 34.8 cm / 47 = 0.7404

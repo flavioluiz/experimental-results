@@ -1,4 +1,5 @@
 clear all; clc;
+%%
 addpath('..\mimo_frf\');
 load asymexc_1;
 time_input{1} = inputvalues;
@@ -31,12 +32,15 @@ loglog(freq, abs(frff{2,2}))
 
 %%
 figure;
-loglog(freq, abs(frff{1,1}-frff{1,2})); hold all;
-load asymexc_1;
+loglog(freq, abs(frff{1,1})); hold all;
+load symexc_1;
 freqresp = fft(outputvalues(:,1))./fft(inputvalues(:,1));
 freqresp = freqresp(1:length(frff{1,1}));
 loglog(freq, abs(freqresp)); 
-legend('H1', 'exp');
+%[MAG,PHASE] = bode(sys(4,1),freq*2*pi);
+%loglog(freq,MAG(:));
+axis([5e-1 60 1e-3 1e3])
+legend('H1', 'theo');
 
 return;
 %%
