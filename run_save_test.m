@@ -1,6 +1,6 @@
 function run_save_test(name)
     global Tfinal;
-    global output input times  T AMP1 AMP2;
+    global output input times  T AMP1 AMP2 control_input;
     set_param(gcs,'SimulationCommand','connect');
     set_param(gcs,'SimulationCommand','start');
     Tfinal
@@ -10,5 +10,5 @@ function run_save_test(name)
 
     inp = input.signals.values(:,:);
     inputvalues = inp;   
-    save(name,'inputvalues','outputvalues','times')
+    save(name,'inputvalues','outputvalues','times', 'control_input')
 end
