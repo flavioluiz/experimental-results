@@ -190,3 +190,13 @@ AMP2 = 10;
 run_save_test('symexc_5thmode_10V');
 
 
+%% open loop exciting all time
+SINE_FREQ = freq5*2*pi;
+T_EXC = 60;
+T_STOP = 60;
+AMP1 = 3;
+AMP2 = 3;
+run_save_test('symexc_5thmode_3V');
+
+
+
